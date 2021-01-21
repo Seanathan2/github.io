@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Menu </title>
+		<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+		<script>
+			function start(){
+				sjs.open("target", 600, 500);
+				var background = new sjs.Image("Images/start_screen.png");
+				var startbtn = new sjs.Image("Images/start.png");
+				startbtn.moveTo(210, 268);
+				startbtn.setSize(180, 47);
+				startbtn.onMouseDown(function(){
+					window.location = "level.html"
+				});
+				var manualbtn = new sjs.Image("Images/journal.png");
+				manualbtn.moveTo(160, 330);
+				manualbtn.setSize(282, 60);
+				manualbtn.onMouseDown(function(){
+					window.location = "journal.html"
+				});
+				var helpbtn = new sjs.Image("Images/help.png");
+				helpbtn.moveTo(220, 400);
+				helpbtn.setSize(148, 51);
+				helpbtn.onMouseDown(function(){
+					window.location = "help.html"
+				});
+			}
+
+		</script>
+	</head>
+	<body onload="start()">
+		<h1> Menu </h1>
+
+		<div id="target" style="margin:auto;background:black;"></div>
+	</body>
+</html>
